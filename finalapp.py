@@ -2,8 +2,8 @@ import streamlit as st
 from PIL import Image
 import helper as help
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-title_img=Image.open('image\logo.jpg')
-end_img=Image.open('image\end_logo.jpg')
+title_img=Image.open('logo.jpg')
+end_img=Image.open('end_logo.jpg')
 st.image(title_img)
 
 
@@ -20,7 +20,7 @@ Among popular apps WhatsApp is a free messaging application. According to [Whats
  people in India using WhatsApp is larger than any country [390.1 million users]
   ''')
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
-path=st.text_input('edit here to enter your textfile path','demo_data\chat_akhil.txt')
+path=st.text_input('edit here to enter your textfile path','chat_akhil.txt')
 
 f=open(path,encoding='utf-8')
 chats=f.readlines()
