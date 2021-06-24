@@ -1,7 +1,9 @@
 import streamlit as st
 from PIL import Image
 import helper as help
+import io
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 title_img=Image.open('logo.jpg')
 end_img=Image.open('end_logo.jpg')
 st.image(title_img)
@@ -22,8 +24,9 @@ Among popular apps WhatsApp is a free messaging application. According to [Whats
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
 path=st.text_input('edit here to enter your textfile path','chat_akhil.txt')
 
-f=open(path,encoding='utf-8')
-chats=f.readlines()
+file=st.file_uploader('f',type=['txt'])
+raw_text=io.TextIOWrapper(file,encoding='utf-8')
+chats=raw_text.readlines()
 
 df=help.list_to_DF(chats)
 df=help.data_preperation(df)
