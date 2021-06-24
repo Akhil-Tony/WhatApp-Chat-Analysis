@@ -22,9 +22,8 @@ Among popular apps WhatsApp is a free messaging application. According to [Whats
  people in India using WhatsApp is larger than any country [390.1 million users]
   ''')
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
-path=st.text_input('edit here to enter your textfile path','chat_akhil.txt')
 
-file=st.file_uploader('f',type=['txt'])
+file=st.file_uploader('select your chat.txt file',type=['txt'])
 raw_text=io.TextIOWrapper(file,encoding='utf-8')
 chats=raw_text.readlines()
 
