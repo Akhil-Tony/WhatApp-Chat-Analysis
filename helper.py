@@ -89,7 +89,7 @@ def get_wordcloud(df_w):
     df_w.dropna(inplace=True)
     df_w=df_w[~(df_w['message']=='<Media omitted>')]
     text=' '.join(df_w.message.values)
-    stp_wrd=['message deleted','Missed voice','This']  #stopwords.words('english')
+    stp_wrd=['This','message','was','You','deleted','this']  #stopwords.words('english')
 
     cloud=WordCloud(width=3000,height=1700,stopwords=stp_wrd,background_color='black',
                     max_words=500,min_word_length=4,colormap='Set1').generate(text)
