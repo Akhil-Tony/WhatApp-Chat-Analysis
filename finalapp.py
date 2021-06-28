@@ -6,6 +6,7 @@ import io
 
 title_img=Image.open('logo.jpg')
 end_img=Image.open('end_logo.jpg')
+guide_img=Image.open('guideline.jpg')
 st.image(title_img)
 
 st.markdown('''
@@ -13,7 +14,7 @@ Among popular apps WhatsApp is a free messaging application. According to [Whats
  people in India using WhatsApp is larger than any country [390.1 million users]
   ''')
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
-st.markdown('Chat >> More >> Export Chat >> Without Media')
+st.image(guide_img)
 
 file=st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
 if file!=None:
