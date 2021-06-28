@@ -15,7 +15,7 @@ Among popular apps WhatsApp is a free messaging application. According to [Whats
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
 st.markdown('Chat >> More >> Export Chat >> Without Media')
 
-file=st.file_uploader('select your chat.txt file',type=['txt'])
+file=st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
 if file!=None:
  raw_text=io.TextIOWrapper(file,encoding='utf-8')
  chats=raw_text.readlines()
