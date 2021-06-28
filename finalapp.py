@@ -13,7 +13,7 @@ Among popular apps WhatsApp is a free messaging application. According to [Whats
  people in India using WhatsApp is larger than any country [390.1 million users]
   ''')
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
-st.markdown('Chat >> More >> Export Chat')
+st.markdown('Chat >> More >> Export Chat >> Without Media')
 
 file=st.file_uploader('select your chat.txt file',type=['txt'])
 if file!=None:
