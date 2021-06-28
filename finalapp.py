@@ -8,20 +8,12 @@ title_img=Image.open('logo.jpg')
 end_img=Image.open('end_logo.jpg')
 st.image(title_img)
 
-
-st.markdown('''
-In this technology era where text messages are faster than any communication medium
-,where people who once been [extroverts](https://www.verywellmind.com/signs-you-are-an-extrovert-2795426)
-are living introverted life. Recent studies shows that
- young people are madly investing majority of their time in social medias than engaging in any
-  self developement practices
-''')
-
 st.markdown('''
 Among popular apps WhatsApp is a free messaging application. According to [WhatsApp 2021 user statistics](https://backlinko.com/whatsapp-users)
  people in India using WhatsApp is larger than any country [390.1 million users]
   ''')
 st.markdown('Analysing WhatsApp chat can give us many surprising insights')
+st.markdown('Chat >> More >> Export Chat')
 
 file=st.file_uploader('select your chat.txt file',type=['txt'])
 if file!=None:
