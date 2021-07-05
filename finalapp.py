@@ -10,7 +10,7 @@ guide_img=Image.open('guideline.jpg')
 st.image(title_img)
 
 st.markdown('''
-Among popular apps WhatsApp is a free messaging application. According to [WhatsApp 2021 user statistics](https://backlinko.com/whatsapp-users)
+WhatsApp is a free messaging application. According to [WhatsApp 2021 user statistics](https://backlinko.com/whatsapp-users)
  people in India using WhatsApp is larger than any country [390.1 million users]
   ''')
 st.markdown('Analysing WhatsApp chats may lead to many surprising insights')
