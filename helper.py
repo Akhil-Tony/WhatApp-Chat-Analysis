@@ -126,7 +126,7 @@ def histogram(df):
     dummy=pd.Series([0]*24)
     active_hours=np.add(dummy,active_hours).fillna(0).astype(int)
 
-    fg=px.histogram(x=active_hours.index,y=active_hours,nbins=24,height=450,width=610,
+    fg=px.histogram(x=active_hours.index,y=active_hours,nbins=24,height=450,width=610,range_x=[0,24],
     title='Most Active Time Hours',color_discrete_sequence=['violet'])
     fg.update_xaxes(nticks=28)
     fg.data[0]['hovertemplate']='Time: %{x}hr<br>%{y} Messages'
