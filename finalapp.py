@@ -4,8 +4,8 @@ import helper as help
 import io
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-title_img=Image.open('logo.jpg')
-end_img=Image.open('end_logo.jpg')
+title_img=Image.open('header.jpg')
+end_img=Image.open('workflow.jpg')
 guide_img=Image.open('guideline.jpg')
 st.image(title_img)
 
