@@ -25,14 +25,14 @@ if file!=None:
  df=help.data_preperation(df)
 
 
- col1,col2=st.beta_columns([1.5,1])
+ col1,col2=st.columns([1.5,1])
 
  with col1:
      st.write(help.linepolar(df))
  with col2:
      st.write(help.histogram(df))
 
- col1,col2=st.beta_columns([.3,1])
+ col1,col2=st.columns([.3,1])
  with col1:
      st.markdown('Its funny that i was wondering whether these emojis had any sentimental feelings')
  with col2:
@@ -49,7 +49,7 @@ if file!=None:
  st.subheader('WorkFlow')
  st.image(end_img)
 
- with st.beta_expander('About'):
+ with st.expander('About'):
      col1,col2,col3=st.beta_columns(3)
 
      with col1:
