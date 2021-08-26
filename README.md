@@ -11,3 +11,22 @@ backgroundColor = "#00172B"
 secondaryBackgroundColor = "#0083B8"
 textColor = "#DCDCDC"
 font = "sans-serif"
+
+
+
+
+
+
+
+
+mkdir -p ~/.streamlit/
+echo "
+[general]n
+email = "your-email@domain.com"n
+" > ~/.streamlit/credentials.toml
+echo "
+[server]n
+headless = truen
+enableCORS=falsen
+port = $PORTn
+" > ~/.streamlit/config.toml
