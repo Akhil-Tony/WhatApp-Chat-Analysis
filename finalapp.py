@@ -10,11 +10,12 @@ guide_img=Image.open('guideline2.jpg')
 demo_img=Image.open('demo.jpg')
 st.image(title_img)
 
-st.markdown('''Data visualization is very common in our day to day life, they often appear in the form of charts and graphs.
-Complex data shown graphically so that it will be easier for the human brain to understand and process it to discover
-unknown facts and relationships to find a way to find out meaningful information.
+st.markdown('''
+WhatsApp is a messaging application. According to [WhatsApp 2021 user statistics](https://backlinko.com/whatsapp-users)
+ people in India using WhatsApp is larger than any country [390.1 million users]
+  ''')
+st.markdown('Analysing WhatsApp chats may lead to many surprising insights')
 
-''')
 st.image(guide_img)
 
 file=st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
