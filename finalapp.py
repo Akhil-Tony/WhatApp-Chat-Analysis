@@ -10,10 +10,10 @@ guide_img=Image.open('guideline2.jpg')
 demo_img=Image.open('demo.jpg')
 st.image(title_img)
 
-st.markdown('''Data visualization is very common in your day to day life, they often appear in the form of charts and graphs.
-In other words, data shown graphically so that it will be easier for the human brain to understand and process it.
-Data visualization often used to discover unknown facts and trends.
-By observing relationships and comparing datasets, you can find a way to find out meaningful information.
+st.markdown('''Data visualization is very common in our day to day life, they often appear in the form of charts and graphs.
+Complex data shown graphically so that it will be easier for the human brain to understand and process it to discover
+unknown facts and relationships to find a way to find out meaningful information.
+
 ''')
 st.image(guide_img)
 
