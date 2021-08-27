@@ -7,6 +7,7 @@ import io
 title_img=Image.open('header.jpg')
 end_img=Image.open('workflow.jpg')
 guide_img=Image.open('guideline2.jpg')
+demo_img=Image.open('demo.jpg')
 st.image(title_img)
 
 st.markdown('''
@@ -73,3 +74,6 @@ if file!=None:
      with col3:
          st.subheader('Acknowledgements')
          st.markdown('Thanks to my dearest friend Sona Martin for her help and support')
+else:
+ if st.button('Demo'):
+  st.image(demo_img)
