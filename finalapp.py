@@ -10,11 +10,11 @@ guide_img=Image.open('guideline2.jpg')
 demo_img=Image.open('demo.jpg')
 st.image(title_img)
 
-st.markdown('''
-WhatsApp is a free messaging application. According to [WhatsApp 2021 user statistics](https://backlinko.com/whatsapp-users)
- people in India using WhatsApp is larger than any country [390.1 million users]
-  ''')
-st.markdown('Analysing WhatsApp chats may lead to many surprising insights')
+st.markdown('''Data visualization is very common in your day to day life, they often appear in the form of charts and graphs.
+In other words, data shown graphically so that it will be easier for the human brain to understand and process it.
+Data visualization often used to discover unknown facts and trends.
+By observing relationships and comparing datasets, you can find a way to find out meaningful information.
+''')
 st.image(guide_img)
 
 file=st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
