@@ -75,5 +75,5 @@ if file!=None:
          st.subheader('Acknowledgements')
          st.markdown('Thanks to my dearest friend Sona Martin for her help and support')
 else:
- if st.button('Demo'):
+ if st.button('Show Demo'):
   st.image(demo_img)
