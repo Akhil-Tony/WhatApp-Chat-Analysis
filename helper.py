@@ -91,8 +91,8 @@ def get_wordcloud(df_w):
     df_w=df_w[~(df_w['message']=='<Media omitted>')]
     text=' '.join(df_w.message.values)
     email_re=r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
-    stp_wrds=stopwords.words('english')+['message','deleted']
-    # text= re.sub(email_re,'URL',text)
+    # stp_wrds=stopwords.words('english')+['message','deleted']
+    text= re.sub(email_re,'URL',text)
 
     cloud=WordCloud(width=3000,height=1700,background_color='black',
                     max_words=500,min_word_length=4,colormap='Set1').generate(text)   # stopwords=stp_wrds,
