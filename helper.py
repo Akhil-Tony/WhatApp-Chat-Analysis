@@ -1,4 +1,4 @@
-from pandas import DataFrame,Timestamp,Series
+import pandas as pd
 import re
 import numpy as np
 from collections import Counter
@@ -6,19 +6,19 @@ from datetime import datetime
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import plotly.express as px
-#import seaborn as sns
 import calmap
 from nltk.corpus import stopwords
 import emoji
 import warnings
 warnings.filterwarnings('ignore')
+
 #******************************************************************************
 
 d_t_format=['%d/%m/%Y, %I:%M %p','%d/%m/%y, %I:%M %p','%m/%d/%y, %I:%M %p']
 date=re.compile('\d{1,2}/\d{1,2}/\d{2,4}')
 
 def list_to_DF(_list,f=0):
-    df=DataFrame(columns=['date_time','author','message'])
+    df=pd.DataFrame(columns=['date_time','author','message'])
     for chat in _list:   #LOcK HERE
         if date.match(chat):
             datetym,conversation=re.split('-',chat,maxsplit=1)
@@ -48,10 +48,10 @@ def data_preperation(df):
 
     df.dropna(inplace=True)
 
-    df['day']=df['date_time'].apply(Timestamp.day_name)
-    df['month']=df['date_time'].apply(Timestamp.month_name)
+    df['day']=df['date_time'].apply(pd.Timestamp.day_name)
+    df['month']=df['date_time'].apply(pd.Timestamp.month_name)
     df['year']=df['date_time'].apply(y)    #(pd.Timestamp.year)
-    df['time']=df['date_time'].apply(Timestamp.time)
+    df['time']=df['date_time'].apply(pd.Timestamp.time)
     df['emoji_used']=df.message.apply(emg_extrct)
     df['word_count']=df.message.apply(count_w)
     df['emoji_count']=df.emoji_used.apply(count_emoji)
@@ -76,11 +76,12 @@ def linepolar(df):
 # Calender graph
 def calmapp(df):
     temp=df.copy()
-    temp.date_time=temp.date_time.apply(lambda x:Timestamp(x.date()))
+    temp.date_time=temp.date_time.apply(lambda x:pd.Timestamp(x.date()))
     temp.set_index('date_time',inplace=True)
     cal_df=temp.groupby('date_time').size()#['word_count'].sum()  # <-------- why use a .size() here no of texts make sense
     fg=plt.figure(figsize=(16,10),dpi=80,facecolor='grey')
-    f=calmap.yearplot(cal_df,monthly_border=True,cmap='terrain_r')
+    year=max(df['year'])
+    f=calmap.yearplot(cal_df,year=year,monthly_border=True,cmap='terrain_r')
     fg.colorbar(f.get_children()[1],ax=f,orientation='vertical',aspect=10,shrink=.2)
 
     return fg
@@ -89,9 +90,11 @@ def get_wordcloud(df_w):
     df_w.dropna(inplace=True)
     df_w=df_w[~(df_w['message']=='<Media omitted>')]
     text=' '.join(df_w.message.values)
-    stp_wrd=['This','message','was','You','deleted','this']  #stopwords.words('english')
+    email_re=r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+    stp_wrds=stopwords.words('english')+['message','deleted']
+    text= re.sub(email_re,'URL',text)
 
-    cloud=WordCloud(width=3000,height=1700,stopwords=stp_wrd,background_color='black',
+    cloud=WordCloud(width=3000,height=1700,stopwords=stp_wrds,background_color='black',
                     max_words=500,min_word_length=4,colormap='Set1').generate(text)
     return cloud
 #Word cloud plotting
@@ -105,7 +108,7 @@ def plott(img):
 def treemap(df_w):
     emoji_count=dict(Counter(list(''.join(df_w.emoji_used))))
     emoji_count=sorted(emoji_count.items(),key=lambda x:x[1],reverse=True)
-    emo_df=DataFrame(emoji_count,columns=['emoji','count'])
+    emo_df=pd.DataFrame(emoji_count,columns=['emoji','count'])
     em_name=lambda x:emoji.demojize(x).strip(':')
     emo_df['name']=emo_df.emoji.apply(em_name)
 
@@ -123,7 +126,7 @@ def histogram(df):
     date=df['date_time'].apply(get_date)
     time=df['time'].apply(get_hr)
     active_hours=df.groupby([date,time]).size().unstack('date_time').mean(1)
-    dummy=Series([0]*24)
+    dummy=pd.Series([0]*24)
     active_hours=np.add(dummy,active_hours).fillna(0).astype(int)
 
     fg=px.histogram(x=active_hours.index,y=active_hours,nbins=24,height=450,width=610,range_x=[0,23],
