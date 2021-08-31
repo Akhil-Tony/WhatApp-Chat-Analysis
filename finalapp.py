@@ -11,10 +11,7 @@ demo_img=Image.open('demo.jpg')
 st.image(title_img)
 
 st.markdown('''
-According to [WhatsApp 2021 user statistics](https://backlinko.com/whatsapp-users)
- people in India using WhatsApp is larger than any country [390.1 million users]
-  ''')
-st.markdown('Analysing WhatsApp chats may lead to many surprising insights')
+To analyse your own personal or group chats follow the below guideline and click the Browse file option''')
 
 st.image(guide_img)
 
