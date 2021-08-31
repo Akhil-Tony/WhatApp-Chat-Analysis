@@ -4,7 +4,7 @@ from helper import analyse
 import io
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-title_img=Image.open('logo.jpg')
+title_img=Image.open('header.jpg')
 end_img=Image.open('workflow.jpg')
 guide_img=Image.open('guideline2.jpg')
 
