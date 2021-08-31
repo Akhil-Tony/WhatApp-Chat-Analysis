@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run finalapp.py
+web: sh setup.sh && streamlit run new_final_edit.py
