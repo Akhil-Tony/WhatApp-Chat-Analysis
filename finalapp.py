@@ -78,7 +78,7 @@ if file!=None:
 else:
  st.markdown("Or if you want to see a live demonstration ,select any chats from the below dropdown")
 
- available_chat_files=['No File Selected','WhatsApp Chat with Psychology Pedagogy.txt','WhatsApp Chat with DataScience(MG).txt']
+ available_chat_files=['No File Selected','WhatsApp Chat with Psychology Pedagogy.txt','WhatsApp Chat with BCA 2019 Official.txt']
 
  file = st.selectbox('select from available demo chat files',available_chat_files)
 
