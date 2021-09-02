@@ -9,31 +9,27 @@ end_img=Image.open('workflow.jpg')
 guide_img=Image.open('guideline2.jpg')
 
 def about():
-     with st.expander('About'):
+     with st.expander('Privacy and Policy'):
          col1,col2,col3=st.columns(3)
 
          with col1:
-             st.subheader('Developer Contact')
-             st.markdown('we love to hear your feedback or incase any suggestions, mail me at akhi_mwon@gmail.com')
-
-             st.subheader('info')
-             st.markdown('released on 22 june 2021')
+             st.subheader('Privacy')
+             st.markdown('''This Application is merely a data processing pipeline to help you visualize your chat data,
+             This application do not store any of your private information nor any parts the chat data''')
 
              st.subheader('App Permission')
-             st.markdown('WhatsApp Chat Analysis may require permission to read your device internal storage')
+             st.markdown('For Analysing your local data WhatsApp Chat Analysis may require permission to read your device internal storage')
 
          with col2:
 
-             st.subheader('a_t logics')
-             st.markdown('a_t logics is a non profitable company owned and maintained by Mr.Akhil Tony')
 
-             st.subheader('Licence')
-             st.markdown('a_t logics is currently running as a non recognized software company')
+             st.subheader('Developer Contact')
+             st.markdown('In case any issues,suggestions or feedbacks mail me at akhiltony17@gmail.com ')
 
          with col3:
              st.subheader('Acknowledgements')
-             st.markdown('Thanks to my dearest friend Sona Martin for her help and support')
-
+             st.markdown('................')
+          
 def dash_board(object):
     col1,col2=st.columns([1.5,1])
 
