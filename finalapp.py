@@ -211,7 +211,8 @@ st.title('WhatsApp Chat Analysis')
 
 if file == None:
 
-    st.markdown('Showing a Demonstration by analysing BCA 2019 WhatsApp Group Chat')
+    st.markdown('Showing Demonstration by analysing Group Chat')
+    st.subheader('BCA 2019 WhatsApp ')
     Name = 'BCA Official 2019'
     chats = pd.read_csv('BCA_2019.csv')
     #********************************************
