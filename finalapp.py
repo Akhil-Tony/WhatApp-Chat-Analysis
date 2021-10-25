@@ -77,7 +77,10 @@ def dash_board(object):
 
     st.subheader('Calender Plot')
     st.markdown('This Calender talks the intensity of the chat conversation in each day of the year by month')
-    st.write(object.calmapp())
+    years = object.df.year.unique()
+    for year in years:
+        st.markdown(year)
+        st.write(object.calmapp(year))
     st.write('\n')
 
     st.write(object.linepolar())
@@ -128,13 +131,13 @@ class analyse:
         return fig2
 
     # Calender graph
-    def calmapp(self):
+    def calmapp(self,year):
         temp=self.df.copy()
         temp.date_time=temp.date_time.apply(lambda x:pd.Timestamp(x.date()))
         temp.set_index('date_time',inplace=True)
         cal_df=temp.groupby('date_time').size()#['word_count'].sum()  # <-------- why use a .size() here no of texts make sense
         fg=plt.figure(figsize=(16,10),dpi=80,facecolor='grey')
-        year=max(self.df['year'])    # <---- change here to gain multi year display
+#         year=max(self.df['year'])    # <---- change here to gain multi year display
         f=calmap.yearplot(cal_df,year=year,monthly_border=True,cmap='terrain_r')
         fg.colorbar(f.get_children()[1],ax=f,orientation='vertical',aspect=10,shrink=.2)
 
