@@ -197,7 +197,7 @@ class analyse:
         fg.data[0]['hovertemplate']='Time: %{x}hr<br>%{y} Messages'
         fg.data[0]['showlegend']=True
         fg.update_layout(xaxis_title='Time Hour in 24hour Format',
-        yaxis_title='Average Number of Messages',legend_itemclick=False)
+        yaxis_title='Total Number of Messages',legend_itemclick=False)
         fg.data[0]['name']='Messages'
 
         return fg
