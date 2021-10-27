@@ -187,7 +187,7 @@ class analyse:
 
         date=self.df['date_time'].apply(get_date)
         time=self.df['time'].apply(get_hr)
-        active_hours=self.df.groupby([date,time]).size().unstack('date_time').mean(1)
+        active_hours=self.df.groupby([date,time]).size().unstack('date_time')#.mean(1)
         dummy=pd.Series([0]*24)
         active_hours=np.add(dummy,active_hours).fillna(0).astype(int)
 
