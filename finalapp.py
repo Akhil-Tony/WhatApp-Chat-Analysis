@@ -68,8 +68,9 @@ def dash_board(object):
     total_medias = (object.df.message=='<Media omitted>').sum()
     total_messages = len(object.df)
 
-    Overview = pd.DataFrame({'Total no of Messages':total_messages,'Total no of Medias':total_medias,
-                             'Total no of Emojis':total_emojis},index=[0])
+    Overview = pd.DataFrame([total_messages,total_medias,total_emojis],
+                            index=['Total no of Messages','Total no of Medias','Total no of Emojis'],columns=[''])
+
 
     st.markdown('Overview')
     st.dataframe(Overview)
