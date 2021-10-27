@@ -89,7 +89,7 @@ def dash_board(object):
 
     st.write(object.emoji_pie())
 
-    st.subheader('Frequency Word Plot')
+    st.subheader('Text CloudChart')
     st.write(object.plott(object.get_wordcloud()))
 
     # st.subheader('Project WorkFlow')
