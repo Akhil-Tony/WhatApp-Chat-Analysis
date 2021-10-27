@@ -117,7 +117,7 @@ class analyse:
         avg_counts=self.df.groupby(['day',date],sort=False).size().unstack('date_time').sum(1)
 
         fig2=px.line_polar(avg_counts,r=avg_counts,theta=avg_counts.index,line_close=True,
-                            color_discrete_sequence=px.colors.sequential.Aggrnyl,template='seaborn',height=500,width=500)
+                            color_discrete_sequence=px.colors.sequential.amp_r,template='seaborn',height=500,width=500)
 
         fig2.update_layout(
         title={
