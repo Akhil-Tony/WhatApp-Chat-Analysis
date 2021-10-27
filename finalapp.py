@@ -120,7 +120,7 @@ class analyse:
 
         fig2.update_layout(
         title={
-        'text': "Activity Level vs WeekDays",
+        'text': "Activity Level per WeekDay",
         'y':1,
         'x':0,
         'xanchor': 'left',
