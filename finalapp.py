@@ -207,7 +207,7 @@ class analyse:
 
 st.sidebar.subheader('Overview')
 st.sidebar.markdown('''This Application is merely a data processing pipeline to help you visualize your chat data,
-This application do not store any of your private information nor any parts the chat data''')
+This application do not store any of your personal information''')
 st.sidebar.subheader('Contact')
 st.sidebar.markdown('In case any issues,suggestions or feedbacks mail me at akhiltony17@gmail.com ')
 file = st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
