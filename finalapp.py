@@ -129,7 +129,7 @@ else:
     st.write('tick the courses')
     selections = []
     courses = np.array(data.columns[2:])
-    c1,c2,c3,c4 = st.columns(4)
+    c1,c2,c3,c4 = st.columns(5)
 
     with c1:
         for course in courses[:4]:
