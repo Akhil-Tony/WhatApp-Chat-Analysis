@@ -32,7 +32,7 @@ def students_per_batch(data):
 
     fig = px.histogram(x=hist.index,y=hist,height=450,width=610,
     title="Batch Wise Strength",
-    color_discrete_sequence=['yellow'])
+    color_discrete_sequence=['coral'])
     fig.update_layout(
     xaxis_title="",
     yaxis_title="") 
