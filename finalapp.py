@@ -210,12 +210,13 @@ st.sidebar.markdown('''This Application is merely a data processing pipeline to 
 This application do not store any of your personal information''')
 st.sidebar.subheader('Contact')
 st.sidebar.markdown('In case any issues,suggestions or feedbacks mail me at akhiltony17@gmail.com ')
-file = st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
 st.title('WhatsApp Chat Analysis')
+st.write('Upload your WhatsApp Chat File here')
+file = st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
 
 if file == None:
 
-    st.subheader('BCA 2019 Official ')
+    st.subheader('BCA 2019 Official [Showing Demo]')
     Name = 'BCA Official 2019'
     chats = pd.read_csv('BCA_2019.csv')
     #********************************************
