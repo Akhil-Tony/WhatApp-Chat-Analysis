@@ -1,4 +1,4 @@
-# WhatApp-Chat-Analysis
+# WhatsApp Chat Analysis
 <h3> A Data Analysis Application for doing statistical analysis on whatsapp group chat data <h3>
 
 to see the web app live 
