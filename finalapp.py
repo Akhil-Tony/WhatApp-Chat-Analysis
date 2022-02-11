@@ -216,7 +216,7 @@ file = st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=
 
 if file == None:
 
-    st.subheader('BCA 2019 Official [Showing Demo]')
+    st.subheader('[Showing Demo] BCA 2019 Official')
     Name = 'BCA Official 2019'
     chats = pd.read_csv('BCA_2019.csv')
     #********************************************
