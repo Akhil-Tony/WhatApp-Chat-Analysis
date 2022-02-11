@@ -3,3 +3,5 @@
 
 to see the web app live 
 <a href="https://share.streamlit.io/akhil-tony/whatapp-chat-analysis/main/finalapp.py">click here<a>
+
+<img src='header.jpg'/>
