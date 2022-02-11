@@ -1,8 +1,5 @@
 # WhatApp-Chat-Analysis
-web application to analysis whatsapp chats 
-to see a live click here
-https://share.streamlit.io/akhil-tony/whatapp-chat-analysis/main/finalapp.py
+<h3> A Data Analysis Application for doing statistical analysis on whatsapp group chat data <h3>
 
-
-
-<h1> heading <h1>
+to see the web app live 
+<a href="https://share.streamlit.io/akhil-tony/whatapp-chat-analysis/main/finalapp.py">click here<a>
