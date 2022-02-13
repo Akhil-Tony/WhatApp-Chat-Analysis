@@ -1,6 +1,12 @@
 # WhatsApp Chat Analysis
-<h3> A Data Analysis Application for doing statistical analysis on whatsapp group chat data <h3>
-
+<h2>Frameworks Used</h2>
+<ul>
+  <li>Pandas</li>
+  <li>Numpy</li>
+  <li>Plotly</li>
+  <li>Streamlit Cloud</li>
+ </ul>
+A Data Visualization Web Application for doing statistical analysis on whatsapp group chat data
 to see the web app live 
 <a href="https://share.streamlit.io/akhil-tony/whatapp-chat-analysis/main/finalapp.py">click here<a>
 
