@@ -211,7 +211,7 @@ This application do not store any of your personal information''')
 st.sidebar.subheader('Contact')
 st.sidebar.markdown('In case any issues,suggestions or feedbacks mail me at akhiltony17@gmail.com ')
 st.title('WhatsApp Chat Analysis')
-st.subheader('Upload your WhatsApp Chat File here')
+st.subheader('Upload your WhatsApp Chat File here ')
 file = st.file_uploader('select your "WhatsApp Chat with _name_.txt" file',type=['txt'])
 
 if file == None:
