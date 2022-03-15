@@ -61,7 +61,7 @@ def data_preperation(df):
 #*****************************************************
 def dash_board(object):
 
-    new_title = '<p style="font-family:sans-serif; color:Green; font-size: 28px;">{}</p>'.format('Analysis for the Author : {}'.format(object.name))
+    new_title = '<p style="font-family:sans-serif; color:#D2691E; font-size: 28px;">{}</p>'.format('Analysis for the Author : {}'.format(object.name))
     st.markdown(new_title, unsafe_allow_html=True)
 
     total_emojis = object.df.emoji_count.sum()
