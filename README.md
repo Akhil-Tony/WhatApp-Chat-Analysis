@@ -6,9 +6,8 @@
   <li>Plotly</li>
   <li>Streamlit Cloud</li>
  </ul>
-A Data Visualization Web Application for doing statistical analysis on whatsapp group chat data
-to see the web app live 
-<a href="https://share.streamlit.io/akhil-tony/whatapp-chat-analysis/main/finalapp.py">click here<a>
+A Data Visualization Web Application for doing statistical analysis on whatsapp group chat data. 
+<a href="https://share.streamlit.io/akhil-tony/whatapp-chat-analysis/main/finalapp.py">LIVE<a>
 
   <h3>WORK FLOW</h3>
 <img src='workflow.jpg'/>
